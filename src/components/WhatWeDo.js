@@ -1,8 +1,8 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { BsCheck2 } from "react-icons/bs";
-import { FaRegHandPeace, FaRegLightbulb, FaCartArrowDown } from "react-icons/fa";
-import { MdElectricBolt } from "react-icons/md";
+import { FaCartArrowDown, FaRegHandPeace } from "react-icons/fa";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
+import { MdElectricBolt } from "react-icons/md";
 
 function WhatWeDo() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,11 +33,6 @@ function WhatWeDo() {
       icon: <MdElectricBolt />,
       title: "ELECTRICAL BENCH CHECKS & REPAIRS",
       description: "Experience top-tier avionics reliability through our exhaustive bench checks and advanced repair techniques. We meticulously assess and repair your aircraft's electrical systems, ensuring flawless functionality. Examples include precision diagnostics for navigation systems, thorough testing of communication equipment, and advanced repairs on critical electrical components for optimal in-flight performance."
-    },
-    {
-      icon: <FaRegLightbulb />,
-      title: "AIRCRAFT FUMIGATION",
-      description: "Operators have reported aircraft infestations by rodents, including mice and rats, as well as reptiles like snakes and lizards, causing passenger and crew discomfort, potential damage, and grounding in extreme cases, especially when electrical wiring is affected. These pests are often attracted to the odor emitted by wire insulation. Our in-service experience reveals that rodents and reptiles tend to access aircraft through open doors and access panels during extended parked periods. Beyond fumigation, we offer comprehensive aircraft disinfection services to eliminate viruses and harmful bacteria, covering specific areas or providing full aircraft disinfection."
     },
     {
       icon: <FaCartArrowDown />,
@@ -89,7 +84,7 @@ function WhatWeDo() {
         </h1>
         <p className='text-sm sm:text-xl p-3 sm:p-5'>
           We offer a comprehensive range of aircraft interior products and services, <br className='hidden sm:inline' />
-          including upholstery, leather, seat cushion & headset repairs, as well as the supply of ready-to-install components, meeting FAA standards.
+          including upholstery, leather, seat cushion & headset repairs, calibration as well as the supply of ready-to-install components, meeting regulatory standards.
         </p>
       </div>
 

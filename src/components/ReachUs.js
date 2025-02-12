@@ -141,7 +141,7 @@ function ContactForm() {
     };
 
     return (
-        <div className="container px-2 sm:px-4">
+        <div className="container px sm:px-4">
             <ToastContainer position="bottom-right" autoClose={5000} />
             <div className='text-center mt-6 sm:mt-10'>
                 <h1 className='text-3xl sm:text-4xl font-bold border-b-2 border-gray-500 inline-block pb-2 sm:pb-4 mt-6 sm:mt-10'>
@@ -149,8 +149,8 @@ function ContactForm() {
                 </h1>
             </div>
 
-            <div className="flex flex-col lg:flex-row justify-between my-4 sm:my-6 mx-2 sm:mx-6"> {/* Adjusted margins */}
-                <div className='border border-gray-300 rounded-lg p-3 sm:p-5 w-full lg:w-1/2 mb-4 lg:mb-0'> {/* Adjusted padding */}
+            <div className="flex flex-col lg:flex-row justify-between my-4 sm:my-6 mx-2 sm:mx-6 items-center ">
+                <div className='border border-gray-300 rounded-lg p-3 sm:p-5 w-full lg:w-1/2 mb-4 lg:mb-0'>
                     <h2 className="text-lg sm:text-xl font-semibold mb-2 mt-2 sm:mt-4">Please Provide Your Details*</h2>
 
                     <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 text-sm sm:text-base mt-4 sm:mt-6">
@@ -174,7 +174,7 @@ function ContactForm() {
                     </form>
                 </div>
 
-                <div className="border border-gray-300 rounded-lg p-3 sm:p-5 w-full lg:w-1/2 lg:ml-4 text-center"> {/* Adjusted padding and margin */}
+                <div className="border border-gray-300 rounded-lg p-3 sm:p-5 w-full lg:w-1/2 lg:ml-4 text-center">
                     <div className='flex flex-col sm:flex-row sm:gap-6'>
                         <div className='mt-2 sm:mt-3 hover:shadow-xl w-full sm:w-1/2'>
                             <iframe
@@ -188,11 +188,12 @@ function ContactForm() {
                         </div>
 
                         <div className='mt-2 sm:mt-3 hover:shadow-xl w-full sm:w-1/2'>
-                            <h2 className="text-base sm:text-lg md:text-xl font-bold text-yellow-500 mb-2 sm:mb-3">Vikram Aviation Pvt Ltd</h2>
-                            <p className="text-xs sm:text-sm text-start px-2 sm:px-3 ml-2">ISO 9001:2015 Certified</p>
+                            <h2 className="text-base sm:text-lg md:text-xl font-bold text-yellow-500">Vikram Aviation Pvt Ltd</h2>
+                            <span className='text-xs sm:text-sm text-start'>A DGCA approved & NABL accrediated</span>
+                            {/* <p className="text-xs sm:text-sm text-start px-2 sm:px-3 ml-2">ISO 9001:2015 Certified</p> */}
                             <div className="flex flex-col md:flex-row justify-between p-1 sm:p-2 gap-1 sm:gap-2">
                                 <div className='text-start p-2 sm:p-3'>
-                                    <p className="text-xs sm:text-sm">Vikram Aviation Pvt Ltd <br />
+                                    <p className="text-xs sm:text-sm px-3">Vikram Aviation Pvt Ltd <br />
                                         Plot No. 02
                                         Khasra No. 348/02,<br />
                                         Sahabad,

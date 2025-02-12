@@ -1,32 +1,21 @@
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { createBrowserRouter, Outlet, Route, Routes, useLocation } from 'react-router-dom';
+import { createBrowserRouter, Outlet, useLocation } from 'react-router-dom';
 import './App.css';
 import Carousel from './components/Carousel';
-import Certification from './components/Certification';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import OurJobTraining from './components/OurJobTraining';
 import OurStory from './components/OurStory';
 import ReachUs from './components/ReachUs';
 import WhatWeDo from './components/WhatWeDo';
 import sliderImg1 from './img/slider_img1.jpg';
 import sliderImg4 from './img/slider_img4.jpg';
 import sliderImg5 from './img/slider_img5.jpg';
-import training1 from './img/training7.jpeg';
-import training2 from './img/training8.jpeg';
-import training3 from './img/training9.jpeg';
 
 const slides = [
   sliderImg1,
   sliderImg4,
   sliderImg5
-];
-
-const trainingList = [
-  training1,
-  training2,
-  training3
 ];
 
 const App = () => {
@@ -46,11 +35,6 @@ const App = () => {
 
   return (
     <>
-    <createBrowserRouter>
-      <Routes>
-        <Route path="/certification" element={<Certification />} />
-      </Routes>
-    </createBrowserRouter>
       <Helmet>
         <title>Vikram Aviation Pvt Ltd</title>
         <meta name="description" content="Welcome to Vikram Aviation Pvt Ltd" />
@@ -76,7 +60,6 @@ const Home = () => (
     <Carousel slides={slides} autoSlide={true} autoSlideInterval={3000} />
     <OurStory />
     <WhatWeDo />
-    <OurJobTraining trainingList={trainingList} />
     <ReachUs />
   </>
 );
@@ -110,7 +93,6 @@ const ScrollToComponent = () => {
       <Carousel slides={slides} autoSlide={true} autoSlideInterval={3000} />
       <div id="about-us"><OurStory /></div>
       <div id="what-we-do"><WhatWeDo /></div>
-      <div id="ame-training"><OurJobTraining trainingList={trainingList} /></div>
       <div id="reach-us"><ReachUs /></div>
     </>
   );

@@ -24,7 +24,7 @@ const Section = ({ title, desc, isVisible, setIsVisible }) => {
             </div>
             {isVisible && (
                 <p className="text-md">
-                    <span className="text-sm md:text-base lg:text-lg font-semibold">Our journey began in 1996,</span>{desc}
+                    <span className="text-sm md:text-base lg:text-lg font-semibold">Our journey began in 1996, </span>{desc}
                 </p>
             )}
         </div>
@@ -48,7 +48,7 @@ const ShowHide = () => {
             />
             <Section
                 title="Approved Workshop"
-                desc="VAPL boasts a Directorate General of Civil Aviation (DGCA)- approved workshop for Aviation Instruments Bench Check, Calibration & Repair, as well as an Electrical Repair & Testing facility. Our persistent focus on safety and quality ensures that every service we provide meets the most stringent standards."
+                desc="Today, VAPL proudly features a Directorate General of Civil Aviation (DGCA)-approved workshop for Aviation Instruments Bench Check, Calibration & Repair, an Electrical Repair & Testing facility, and comprehensive Aircraft Interior Repair & Services. Our persistent focus on safety and quality ensures that every service we provide meets the most stringent standards."
                 isVisible={visibleSection === "Approved Workshop"}
                 setIsVisible={() => toggleSection("Approved Workshop")}
             />
