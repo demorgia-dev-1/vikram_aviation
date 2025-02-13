@@ -36,7 +36,6 @@ function ContactForm() {
 
             if (response.data.message === "Success") {
                 toast.success("Form submitted successfully!");
-                // Reset form
                 setFormData({
                     title: 'Mr.',
                     full_name: '',

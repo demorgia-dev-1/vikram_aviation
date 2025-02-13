@@ -1,6 +1,5 @@
-
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../img/logo.jpg";
@@ -9,11 +8,25 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const location = useLocation();
+    const dropdownRef = useRef(null);
 
     const toggleMenu = () => setIsOpen(!isOpen);
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
     const navItems = ["Home", "About Us", "What We Do", "Certification & Scope", "Reach Us"];
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
         <>
@@ -23,7 +36,7 @@ function Navbar() {
                     <span className="flex items-center text-lg uppercase font-extrabold">
                         Vikram Aviation Now became
                         <img src="/nabl logo.png" alt="nabl logo" className="w-20 h-auto" />
-                        NABL accredited (ISO/IEC 17025 - 2017 accredited) Calibration laboratory
+                        NABL accredited (ISO/IEC 17025 - 2017) Calibration laboratory
                     </span>
                 </div>
             </div>
@@ -78,7 +91,7 @@ function Navbar() {
                                     return (
                                         <motion.li key={index} className="flex items-center space-x-2" whileHover={{ scale: 1.1 }} >
                                             {item === "Certification & Scope" ? (
-                                                <div className="relative">
+                                                <div className="relative" ref={dropdownRef}>
                                                     <button
                                                         onClick={toggleDropdown}
                                                         className="bg-gray-100 text-gray-600 font-bold text-md md:text-lg px-4 py-2 rounded-md focus:outline-none hover:bg-yellow-300"
@@ -151,4 +164,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
