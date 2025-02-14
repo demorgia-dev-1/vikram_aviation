@@ -54,8 +54,6 @@ function ContactForm() {
             toast.error('Failed to submit form. Please try again.');
         }
     };
-
-
     const nextStep = () => setStep(step + 1);
     const prevStep = () => setStep(step - 1);
 
@@ -188,7 +186,7 @@ function ContactForm() {
 
                         <div className='mt-2 sm:mt-3 hover:shadow-xl w-full sm:w-1/2'>
                             <h2 className="text-base sm:text-lg md:text-xl font-bold text-yellow-500">Vikram Aviation Pvt Ltd</h2>
-                            <span className='text-xs sm:text-sm text-start'>A DGCA approved & NABL accrediated</span>
+                            <span className='text-xs sm:text-sm text-start'>DGCA approved & NABL (ISO/IEC-17025:2017) accredited Testing & calibration lab</span>
                             {/* <p className="text-xs sm:text-sm text-start px-2 sm:px-3 ml-2">ISO 9001:2015 Certified</p> */}
                             <div className="flex flex-col md:flex-row justify-between p-1 sm:p-2 gap-1 sm:gap-2">
                                 <div className='text-start p-2 sm:p-3'>

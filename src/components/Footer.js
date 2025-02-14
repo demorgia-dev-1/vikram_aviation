@@ -4,7 +4,6 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { ImLinkedin } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 
-
 const Footer = () => {
     return (
         <footer className="bg-gray-100 p-6">
